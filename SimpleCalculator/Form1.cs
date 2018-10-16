@@ -165,7 +165,17 @@ namespace SimpleCalculator
 
         private void decimalButton_Click(object sender, EventArgs e)
         {
+            //take in first number
+            //add the decimal
+            //add second number
+            string dot = ".";
 
+            if (!textBox1.Text.Contains("."))
+            {
+                textBox1.Text = textBox1.Text + ".";
+            }
+            else
+                MessageBox.Show("You can only use one dot");
         }
 
         private void plusOperator_Click(object sender, EventArgs e)
