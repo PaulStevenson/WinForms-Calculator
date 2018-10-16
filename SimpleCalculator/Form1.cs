@@ -12,10 +12,9 @@ namespace SimpleCalculator
 {
     public partial class Form1 : Form
     {
-        double FirstNum;
-        double SecondNum;
-        string Operation;
-        double Result;
+        double firstNum;
+        string operation;
+
 
 
         public Form1()
@@ -26,7 +25,7 @@ namespace SimpleCalculator
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void clearButton_Click(object sender, EventArgs e)
@@ -67,16 +66,73 @@ namespace SimpleCalculator
 
         private void plusOperator_Click(object sender, EventArgs e)
         {
-            FirstNum = Convert.ToDouble(textBox1.Text);
-            textBox1.Text = "+";
-            Operation = "+";
-            
+            firstNum = Convert.ToDouble(textBox1.Text);
+            textBox1.Text = "";
+            operation = "+";
+
         }
 
         private void equalsOperator_Click(object sender, EventArgs e)
         {
-            
-               
+            double result = 0;
+
+            if (operation == "+")
+            {
+                result = firstNum + Convert.ToDouble(textBox1.Text);
+            }
+
+            else if (operation == "-")
+            {
+                result = firstNum - Convert.ToDouble(textBox1.Text);
+            }
+
+            else if (operation == "*")
+            {
+                result = firstNum * Convert.ToDouble(textBox1.Text);
+            }
+
+            else if (operation == "/")
+            {
+                result = firstNum / Convert.ToDouble(textBox1.Text);
+            }
+
+            textBox1.Text = result.ToString();
+
+
+        }
+
+        private void numberThree_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "0" && textBox1.Text != null)
+            {
+                textBox1.Text = null;
+                textBox1.Text = textBox1.Text = "3";
+            }
+            else
+            {
+                textBox1.Text = textBox1.Text + "3";
+            }
+        }
+
+        private void minusOperator_Click(object sender, EventArgs e)
+        {
+            firstNum = Convert.ToDouble(textBox1.Text);
+            textBox1.Text = "";
+            operation = "-";
+        }
+
+        private void multiplyOperator_Click(object sender, EventArgs e)
+        {
+            firstNum = Convert.ToDouble(textBox1.Text);
+            textBox1.Text = "*";
+            operation = "*";
+        }
+
+        private void divideOperator_Click(object sender, EventArgs e)
+        {
+            firstNum = Convert.ToDouble(textBox1.Text);
+            textBox1.Text = "0";
+            operation = "/";
         }
     }
 }

@@ -92,6 +92,7 @@
             this.numberThree.TabIndex = 4;
             this.numberThree.Text = "3";
             this.numberThree.UseVisualStyleBackColor = true;
+            this.numberThree.Click += new System.EventHandler(this.numberThree_Click);
             // 
             // numberFour
             // 
@@ -182,6 +183,7 @@
             this.multiplyOperator.TabIndex = 15;
             this.multiplyOperator.Text = "X";
             this.multiplyOperator.UseVisualStyleBackColor = true;
+            this.multiplyOperator.Click += new System.EventHandler(this.multiplyOperator_Click);
             // 
             // minusOperator
             // 
@@ -192,6 +194,7 @@
             this.minusOperator.TabIndex = 16;
             this.minusOperator.Text = "-";
             this.minusOperator.UseVisualStyleBackColor = true;
+            this.minusOperator.Click += new System.EventHandler(this.minusOperator_Click);
             // 
             // equalsOperator
             // 
@@ -235,6 +238,7 @@
             this.divideOperator.TabIndex = 21;
             this.divideOperator.Text = "/";
             this.divideOperator.UseVisualStyleBackColor = true;
+            this.divideOperator.Click += new System.EventHandler(this.divideOperator_Click);
             // 
             // clearButton
             // 
