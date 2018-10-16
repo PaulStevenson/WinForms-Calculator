@@ -43,10 +43,10 @@
             this.multiplyOperator = new System.Windows.Forms.Button();
             this.minusOperator = new System.Windows.Forms.Button();
             this.equalsOperator = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.plusOperator = new System.Windows.Forms.Button();
             this.divideOperator = new System.Windows.Forms.Button();
             this.clearButton = new System.Windows.Forms.Button();
+            this.decimalButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -103,6 +103,7 @@
             this.numberFour.TabIndex = 5;
             this.numberFour.Text = "4";
             this.numberFour.UseVisualStyleBackColor = true;
+            this.numberFour.Click += new System.EventHandler(this.numberFour_Click);
             // 
             // numberFive
             // 
@@ -113,6 +114,7 @@
             this.numberFive.TabIndex = 6;
             this.numberFive.Text = "5";
             this.numberFive.UseVisualStyleBackColor = true;
+            this.numberFive.Click += new System.EventHandler(this.numberFive_Click);
             // 
             // numberSix
             // 
@@ -123,6 +125,7 @@
             this.numberSix.TabIndex = 7;
             this.numberSix.Text = "6";
             this.numberSix.UseVisualStyleBackColor = true;
+            this.numberSix.Click += new System.EventHandler(this.numberSix_Click);
             // 
             // numberNine
             // 
@@ -133,6 +136,7 @@
             this.numberNine.TabIndex = 9;
             this.numberNine.Text = "9";
             this.numberNine.UseVisualStyleBackColor = true;
+            this.numberNine.Click += new System.EventHandler(this.numberNine_Click);
             // 
             // numberSeven
             // 
@@ -143,6 +147,7 @@
             this.numberSeven.TabIndex = 10;
             this.numberSeven.Text = "7";
             this.numberSeven.UseVisualStyleBackColor = true;
+            this.numberSeven.Click += new System.EventHandler(this.numberSeven_Click);
             // 
             // numberEight
             // 
@@ -153,6 +158,7 @@
             this.numberEight.TabIndex = 11;
             this.numberEight.Text = "8";
             this.numberEight.UseVisualStyleBackColor = true;
+            this.numberEight.Click += new System.EventHandler(this.numberEight_Click);
             // 
             // numberZero
             // 
@@ -163,6 +169,7 @@
             this.numberZero.TabIndex = 12;
             this.numberZero.Text = "0";
             this.numberZero.UseVisualStyleBackColor = true;
+            this.numberZero.Click += new System.EventHandler(this.numberZero_Click);
             // 
             // dudButton
             // 
@@ -207,17 +214,6 @@
             this.equalsOperator.UseVisualStyleBackColor = true;
             this.equalsOperator.Click += new System.EventHandler(this.equalsOperator_Click);
             // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(162, 161);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 19;
-            this.button4.Text = ".";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // plusOperator
             // 
             this.plusOperator.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -251,15 +247,26 @@
             this.clearButton.UseVisualStyleBackColor = true;
             this.clearButton.Click += new System.EventHandler(this.clearButton_Click);
             // 
+            // decimalButton
+            // 
+            this.decimalButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.decimalButton.Location = new System.Drawing.Point(162, 161);
+            this.decimalButton.Name = "decimalButton";
+            this.decimalButton.Size = new System.Drawing.Size(75, 23);
+            this.decimalButton.TabIndex = 23;
+            this.decimalButton.Text = ".";
+            this.decimalButton.UseVisualStyleBackColor = true;
+            this.decimalButton.Click += new System.EventHandler(this.decimalButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(332, 188);
+            this.Controls.Add(this.decimalButton);
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.divideOperator);
             this.Controls.Add(this.plusOperator);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.equalsOperator);
             this.Controls.Add(this.minusOperator);
             this.Controls.Add(this.multiplyOperator);
@@ -299,10 +306,10 @@
         private System.Windows.Forms.Button multiplyOperator;
         private System.Windows.Forms.Button minusOperator;
         private System.Windows.Forms.Button equalsOperator;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button plusOperator;
         private System.Windows.Forms.Button divideOperator;
         private System.Windows.Forms.Button clearButton;
+        private System.Windows.Forms.Button decimalButton;
     }
 }
 
