@@ -221,6 +221,7 @@
             this.plusOperator.Name = "plusOperator";
             this.plusOperator.Size = new System.Drawing.Size(75, 23);
             this.plusOperator.TabIndex = 20;
+            this.plusOperator.Tag = "";
             this.plusOperator.Text = "+";
             this.plusOperator.UseVisualStyleBackColor = true;
             this.plusOperator.Click += new System.EventHandler(this.plusOperator_Click);

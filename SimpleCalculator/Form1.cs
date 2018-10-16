@@ -14,8 +14,9 @@ namespace SimpleCalculator
     {
         double firstNum;
         string operation;
+        bool HasBeenClicked = false;
 
-
+        public object ScriptManager { get; private set; }
 
         public Form1()
 
@@ -25,14 +26,14 @@ namespace SimpleCalculator
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void clearButton_Click(object sender, EventArgs e)
         {
             textBox1.Text = "0";
         }
-      
+
         private void numberOne_Click(object sender, EventArgs e)
         {
             if (textBox1.Text == "0" && textBox1.Text != null)
@@ -165,12 +166,9 @@ namespace SimpleCalculator
 
         private void decimalButton_Click(object sender, EventArgs e)
         {
-            //take in first number
-            //add the decimal
-            //add second number
             string dot = ".";
 
-            if (!textBox1.Text.Contains("."))
+            if (!textBox1.Text.Contains(dot))
             {
                 textBox1.Text = textBox1.Text + ".";
             }
@@ -180,31 +178,58 @@ namespace SimpleCalculator
 
         private void plusOperator_Click(object sender, EventArgs e)
         {
-            firstNum = Convert.ToDouble(textBox1.Text);
-            textBox1.Text = "";
-            operation = "+";
+            string plus = "+";
 
+            if (!textBox1.Text.Contains(plus))
+            {
+                firstNum = Convert.ToDouble(textBox1.Text);
+                textBox1.Text = "+";
+                operation = "+";
+            }
+            else
+                MessageBox.Show("Opps, you've already started an addition. Select the next number :)");
         }
 
         private void minusOperator_Click(object sender, EventArgs e)
         {
-            firstNum = Convert.ToDouble(textBox1.Text);
-            textBox1.Text = "";
-            operation = "-";
+            string minus = "-";
+
+            if (!textBox1.Text.Contains(minus))
+            {
+                firstNum = Convert.ToDouble(textBox1.Text);
+                textBox1.Text = "-";
+                operation = "-";
+            }
+            else
+                MessageBox.Show("Opps, you've already started a subtraction. Select the next number :)");
         }
 
         private void multiplyOperator_Click(object sender, EventArgs e)
         {
-            firstNum = Convert.ToDouble(textBox1.Text);
-            textBox1.Text = "";
-            operation = "*";
+            string multi = "-";
+
+            if (!textBox1.Text.Contains(multi))
+            {
+                firstNum = Convert.ToDouble(textBox1.Text);
+                textBox1.Text = "*";
+                operation = "*";
+            }
+            else
+                MessageBox.Show("Opps, you've already started a multiplication. Select the next number :)");
         }
 
         private void divideOperator_Click(object sender, EventArgs e)
         {
-            firstNum = Convert.ToDouble(textBox1.Text);
-            textBox1.Text = "";
-            operation = "/";
+            string divide = "/";
+
+            if (!textBox1.Text.Contains(divide))
+            {
+                firstNum = Convert.ToDouble(textBox1.Text);
+                textBox1.Text = "/";
+                operation = "/";
+            }
+            else
+                MessageBox.Show("Opps, you've already started a dividion. Select the next number :)");
         }
 
         private void dudButton_Click(object sender, EventArgs e)
@@ -242,7 +267,7 @@ namespace SimpleCalculator
             {
                 if (textBox1.Text == "0")
                 {
-                    MessageBox.Show("Stop that!");
+                    MessageBox.Show("Are you trying to break everything?");
                 }
                 else
                     result = firstNum / Convert.ToDouble(textBox1.Text);
@@ -252,5 +277,33 @@ namespace SimpleCalculator
 
 
         }
+
+
+
+
+        //FORGOT FOR NOW
+
+        private void preventMultipleOperatorPresses(object sender, EventArgs e)
+        {
+            
+
+        }
+
+
+        //private void preventMultipleOperatorPresses(object sender, EventArgs e)
+        //{
+        //    List<string> operators = new List<string>() { "+", "-", "X", "/" };
+
+        //    foreach (string op in operators)
+        //    {
+        //        if (textBox1.Text.Contains(op))
+        //        {
+        //            MessageBox.Show("Select a numerical value");
+        //        }
+
+
+        //    }
+
+        //}
     }
 }
