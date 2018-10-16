@@ -197,6 +197,13 @@ namespace SimpleCalculator
             operation = "/";
         }
 
+        private void dudButton_Click(object sender, EventArgs e)
+        {
+            firstNum = Convert.ToDouble(textBox1.Text);
+            textBox1.Text = "";
+            operation = "%";
+        }
+
         private void equalsOperator_Click(object sender, EventArgs e)
         {
             double result = 0;
@@ -214,6 +221,11 @@ namespace SimpleCalculator
             else if (operation == "*")
             {
                 result = firstNum * Convert.ToDouble(textBox1.Text);
+            }
+
+            else if (operation == "%")
+            {
+                result = firstNum % Convert.ToDouble(textBox1.Text);
             }
 
             else if (operation == "/")

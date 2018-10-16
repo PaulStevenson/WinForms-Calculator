@@ -178,8 +178,9 @@
             this.dudButton.Name = "dudButton";
             this.dudButton.Size = new System.Drawing.Size(75, 23);
             this.dudButton.TabIndex = 13;
-            this.dudButton.Text = "DUD";
+            this.dudButton.Text = "Modulus";
             this.dudButton.UseVisualStyleBackColor = true;
+            this.dudButton.Click += new System.EventHandler(this.dudButton_Click);
             // 
             // multiplyOperator
             // 
